@@ -28,6 +28,16 @@ app.controller("newHeroController", ["$http", function ($http) {
     self.newHero = {};
     self.heroes = [];
 
+    getHeroes();
+
+    function getHeroes() {
+      $http.get('/heroes')
+        .then(function (response) {
+          console.log(response.data);
+          self.heroes = response.data;
+        });
+    }
+
     self.addHeroes = function () {
       console.log('new hero: ', self.newHero);
       $http.post('/heroes', self.newHero);
