@@ -1,0 +1,13 @@
+<div class="col-md-4 col-md-offset-4">
+  <table class="table">
+    <tr>
+      <th>Hero Persona</th>
+      <th>Hero Alias</th>
+    </tr>
+    <tr ng-repeat="hero in hlc.heroes">
+      <td ng-model="hero.persona">{{hero.persona}}</td>
+      <td ng-model="hero.alias">{{hero.alias}}</td>
+      <td><button ng-click="hlc.deleteHeroes(hero)">Delete</button></td>
+    </tr>
+  </table>
+</div>

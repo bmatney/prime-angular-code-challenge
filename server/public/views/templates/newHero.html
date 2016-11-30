@@ -1,0 +1,17 @@
+<div class="col-md-4 col-md-offset-4">
+  <form role="form" id="heroInfo">
+    <div class="form-group">
+      <label for="persona">Hero Persona:</label>
+      <input type="text" class="form-control" id="persona" name="persona" ng-model="nhc.newHero.persona"/>
+    </div>
+    <div class="form-group">
+      <label for="alias">Hero Last Name:</label>
+      <input type="text" class="form-control" id="alias" name="alias" ng-model="nhc.newHero.alias"/>
+    </div>
+    <div class="form-group">
+      <label for="power_id">Hero ID Number:</label>
+      <input type="number" class="form-control" id="power_id" name="power_id" ng-model="nhc.newHero.power_id"/>
+    </div>
+    <button ng-click="nhc.addHeroes()">Submit</button>
+  </form>
+</div>
